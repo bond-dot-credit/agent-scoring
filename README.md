@@ -28,3 +28,14 @@ The `agent-scoring` branch is the home for:
 5. **Standardization & Validation**  
    - Ensuring metric definitions and code are consistent in units, lookback periods, and naming conventions.
    - Creating validation scripts and automated checks.
+
+## Workflow
+- **Main Development Branch:** `scoring-agent`
+- **Feature Branches:** Create from `scoring-agent` (e.g., `feat/add-success-rate-metric`).
+- **Commits:** Use conventional commit messages:
+
+
+- **Pull Requests:**
+- Target `agent-scoring`
+- Link to related GitHub Issue(s)
+- Include a summary of changes and relevant formulas
