@@ -6,10 +6,8 @@ It serves as the dedicated workspace for developing, testing, and refining the m
 
 All scoring-related work — including sub-branches, commits, and pull requests — will originate from here.
 
----
-
 ## Scope of Work
-The `scoring-agent` branch is the home for:
+The `agent-scoring` branch is the home for:
 
 1. **Metric Definition**  
    - Identifying, categorizing, and documenting the performance, risk, liquidity, and other metrics used in scoring.
