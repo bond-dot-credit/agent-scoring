@@ -34,8 +34,30 @@ The `agent-scoring` branch is the home for:
 - **Feature Branches:** Create from `scoring-agent` (e.g., `feat/add-success-rate-metric`).
 - **Commits:** Use conventional commit messages:
 
-
 **Pull Requests:**
 - Target `agent-scoring`
 - Link to related GitHub Issue(s)
-- Include a summary of changes and relevant formulas
+- Include a summary of changes and relevant formulas.
+
+## Scoring Engine Guidelines
+
+### Metric Inputs
+Metrics in the **Bond.Credit** scoring engines are computed from four main categories of data:
+
+- **On-chain DeFi data** — e.g., total value locked (TVL), historical ROI (CAGR), drawdowns, liquidity depth, volatility, etc.
+- **Off-chain development & security data** — e.g., GitHub repository activity, commit history, release cadence, audit records, vulnerability disclosures, governance events.
+- **Sentiment metrics** — aggregated community sentiment scores derived from API-based analysis of social platforms, governance forum tone, and developer community discussions. These may be polarity-scored or confidence-weighted, depending on the source.
+- **Derived values (feature metrics)** — ratios, rolling growth rates, weighted composite scores, performance trend deltas (e.g., 30-day ROI vs. previous 30 days).
+
+Each metric file must explicitly:
+1. List all required raw inputs.
+2. Reference exact data sources (API endpoint, block height, dataset version).
+3. Specify any weighting, smoothing, or adjustment logic used in calculations.
+
+### Metric Outputs
+All metric results are stored in a **structured JSON or YAML** file with the following fields:
+
+- **`value`** — the computed number or score.
+- **`unit`** — unit of measurement (e.g., `%`, `USD`, `days`).
+- **`timestamp`** — ISO 8601 UTC timestamp of when the calculation was performed.
+- **`source`** — the verifiable data source(s) used (on-chain query, API name, dataset link).
