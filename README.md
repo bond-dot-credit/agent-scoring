@@ -1,7 +1,7 @@
-# Bond.Credit — Scoring Agent
+# bond.credit — Scoring Agent
 
 ## Overview
-This branch contains **all code, documentation, and resources related to the AI Agent Scoring Engine** for Bond.Credit.  
+This branch contains **all code, documentation, and resources related to the AI Agent Scoring Engine** for bond.credit.  
 It serves as the dedicated workspace for developing, testing, and refining the metric definitions, scoring algorithms, and data pipelines that determine creditworthiness for agents.
 
 All scoring-related work — including sub-branches, commits, and pull requests — will originate from here.
@@ -42,7 +42,7 @@ The `agent-scoring` branch is the home for:
 ## Scoring Engine Guidelines
 
 ### Metric Inputs
-Metrics in the **Bond.Credit** scoring engines are computed from four main categories of data:
+Metrics in the **bond.credit** scoring engines are computed from four main categories of data:
 
 - **On-chain DeFi data** — e.g., total value locked (TVL), historical ROI (CAGR), drawdowns, liquidity depth, volatility, etc.
 - **Off-chain development & security data** — e.g., GitHub repository activity, commit history, release cadence, audit records, vulnerability disclosures, governance events.
