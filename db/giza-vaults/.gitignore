@@ -1,0 +1,7 @@
+# Local secrets & volumes for DB subproject
+.env
+.env.*
+_pgdata/
+_pgadmin/
+ops/SET_ROLE_PASSWORDS.sql
+node_modules/
