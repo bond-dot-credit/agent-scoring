@@ -2,6 +2,9 @@
 
 ```mermaid
 erDiagram
+  %% amount_asset: Decimal128 scale 18 (ClickHouse)
+  %% amount_usd:   Decimal128 scale 6  (ClickHouse)
+
   USERS  ||--o{ USER_VAULTS : maps
   VAULTS ||--o{ USER_VAULTS : maps
   VAULTS ||--o{ EXECUTIONS  : records
@@ -38,8 +41,8 @@ erDiagram
     string  asset_symbol
     string  asset_address
     uint8   asset_decimals
-    decimal amount_asset    %% Decimal128 scale 18 in CH
-    decimal amount_usd      %% Decimal128 scale 6 in CH
+    decimal amount_asset
+    decimal amount_usd
     string  protocol
     string  from_protocol
     string  to_protocol
