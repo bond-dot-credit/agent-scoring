@@ -2,8 +2,6 @@
 
 ```mermaid
 erDiagram
-  %% executions_flat is the serving table most queries hit
-
   EXECUTIONS_FLAT {
     string  chain_id
     string  vault_address
@@ -17,8 +15,8 @@ erDiagram
     string  asset_symbol
     string  asset_address
     uint8   asset_decimals
-    decimal amount_asset   %% CH Decimal128(18)
-    decimal amount_usd     %% CH Decimal128(6)
+    decimal amount_asset
+    decimal amount_usd
     string  protocol
     string  from_protocol
     string  to_protocol
