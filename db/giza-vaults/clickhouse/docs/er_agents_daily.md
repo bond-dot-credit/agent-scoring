@@ -1,4 +1,3 @@
-```md
 # ER Diagram — Agents (daily rollups)
 
 ```mermaid
