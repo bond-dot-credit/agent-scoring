@@ -258,7 +258,8 @@ function amaTxToExecRow(tx, { chain_id, agent_name, vault_address, seq = 0 }) {
     to_protocol: tx.to_protocol || '',
     exchange: tx.exchange || '',
 
-    apy_at_execution,                // % value if present, else 0
+    apy_at_execution, 
+    source: 'ama',               // % value if present, else 0
     // ingest_ts comes from server default
   };
 }
