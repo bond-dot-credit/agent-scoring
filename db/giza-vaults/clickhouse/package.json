@@ -1,0 +1,7 @@
+{
+"type": "module",
+"dependencies": {
+"@clickhouse/client": "^0.2.7",
+"dotenv": "^16.4.5"
+}
+}

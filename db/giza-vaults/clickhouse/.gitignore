@@ -1,0 +1,7 @@
+@"
+.env
+.env.*
+_ch_data/
+ops/CH_SET_PASSWORDS.sql
+node_modules/
+"@ | Set-Content -Path "db/giza-vaults/clickhouse/.gitignore"

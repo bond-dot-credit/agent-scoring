@@ -1,0 +1,19 @@
+services:
+  ch:
+    image: clickhouse/clickhouse-server:25.6
+    container_name: giza_clickhouse
+    ports:
+      - "8123:8123"   # HTTP
+      - "9000:9000"   # Native TCP
+    environment:
+      CLICKHOUSE_DB: giza
+      CLICKHOUSE_USER: giza
+      CLICKHOUSE_PASSWORD: ${CH_PASSWORD:-giza_pw_change_me}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "1"
+    volumes:
+      - ./_ch_data:/var/lib/clickhouse
+      - ./init:/docker-entrypoint-initdb.d
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
